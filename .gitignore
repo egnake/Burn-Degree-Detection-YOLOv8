@@ -1,0 +1,18 @@
+# Python gereksizleri
+__pycache__/
+*.py[cod]
+
+# Veri setini yükleme (Çok büyük!)
+dataset/
+datasets/
+
+# Eğitim çıktılarını yükleme (Çok karışık ve büyük)
+runs/
+
+# IDE ayarları
+.vscode/
+.idea/
+
+# Sanal ortam
+venv/
+env/

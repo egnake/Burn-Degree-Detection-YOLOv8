@@ -1,0 +1,13 @@
+path: D:\Projeler\burn_detection\dataset
+
+train: images/train
+val: images/val
+
+# Sınıf Sayısı (Kaggle veri setine göre)
+nc: 3
+
+# Sınıf İsimleri (Sıralama çok önemli, txt dosyasındaki 0, 1, 2 buna denk gelir)
+names: 
+  0: '1. Derece Yanik'
+  1: '2. Derece Yanik'
+  2: '3. Derece Yanik'
