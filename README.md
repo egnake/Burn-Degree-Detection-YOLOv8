@@ -60,7 +60,7 @@ pip install -r requirements.txt
 pip uninstall torch torchvision torchaudio -y
 pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
 ```
-##🖥️ Usage
+## 🖥️ Usage
 ```bash
 python sentinel_ai.py
 ```
@@ -92,7 +92,7 @@ It should NOT be used as a substitute for professional medical diagnosis or trea
 In case of a medical emergency, always contact emergency services immediately.
 ```
 
-##📜 License
+## 📜 License
 ```text
 This project is open-source and available under the MIT License.
 ```
