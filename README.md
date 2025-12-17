@@ -80,8 +80,8 @@ Burn-Degree-Detection/
 ├── requirements.txt     # Project Dependencies
 └── README.md            # Documentation
 ```
-##Medical Disclaimer
-##⚠️ CRITICAL WARNING
+## Medical Disclaimer
+## ⚠️ CRITICAL WARNING
 ```text
 This software is developed for educational and experimental purposes only. It utilizes artificial intelligence algorithms that are probabilistic and can make errors.
 
