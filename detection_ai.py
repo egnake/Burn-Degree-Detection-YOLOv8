@@ -3,17 +3,17 @@ from ultralytics import YOLO
 import math
 import time
 
-# --- AYARLAR ---
-# Eğitim bitince oluşan dosyanın yolu (Burası sende farklı olabilir, kontrol et!)
+# AYARLAR
+# Eğitim bitince oluşan dosyanın yolu (Burası sende farklı olabilir kontrol et)
 MODEL_PATH = 'runs/detect/burn_result/weights/best.pt' 
 
 # Renk Paleti (BGR Formatında)
-COLOR_1ST = (0, 255, 255)   # Sarı
-COLOR_2ND = (0, 128, 255)   # Turuncu
-COLOR_3RD = (0, 0, 255)     # Kırmızı
-COLOR_TXT = (255, 255, 255) # Beyaz
+COLOR_1ST = (0, 255, 255)  
+COLOR_2ND = (0, 128, 255)   
+COLOR_3RD = (0, 0, 255)    
+COLOR_TXT = (255, 255, 255) 
 
-# --- TAVSİYE DATABASE ---
+# database
 def get_medical_advice(degree):
     if "1." in degree:
         return [
@@ -85,7 +85,7 @@ def main():
                     # Kutuyu Ciz
                     cv2.rectangle(img, (x1, y1), (x2, y2), color, 3)
                     
-                    # Etiketi Yaz (Modern Gorunum)
+                    # Etiketi Yaz
                     label = f"{name} %{int(conf*100)}"
                     t_size = cv2.getTextSize(label, 0, fontScale=1, thickness=2)[0]
                     c2 = x1 + t_size[0], y1 - t_size[1] - 3
@@ -99,8 +99,7 @@ def main():
             frame_to_show = img
 
         else:
-            # --- DONDURULMUŞ EKRAN (ANALİZ MODU) ---
-            # Görüntüyü hafif karart (Blur efekti gibi)
+            
             overlay = frame_to_show.copy()
             cv2.rectangle(overlay, (0, 0), (1280, 720), (0, 0, 0), -1)
             frame_to_show = cv2.addWeighted(overlay, 0.7, frame_to_show, 0.3, 0)
@@ -109,7 +108,7 @@ def main():
             cv2.rectangle(frame_to_show, (800, 0), (1280, 720), (20, 20, 20), -1)
             cv2.putText(frame_to_show, "DETAYLI ANALIZ RAPORU", (820, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
             
-            # Son tespit edilen sınıfa göre tavsiye ver (Basitlik icin son kutuyu aliyoruz)
+            # Son tespit edilen sınıfa göre tavsiye vermesi
             # Gerçek senaryoda ekrandaki en büyük yanığı baz almak gerekir.
             try:
                 if 'name' in locals(): # Eğer bir tespit varsa
