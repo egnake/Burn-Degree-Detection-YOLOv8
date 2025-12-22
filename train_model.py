@@ -5,7 +5,7 @@ def start_training():
     # Medium model
     model = YOLO('yolov8m.pt') 
 
-    print("[SİSTEM]: Nöral ağ eğitimi başlatılıyor (High Performance Mode)...")
+    print("[SİSTEM]: Nöral ağ eğitimi başlatılıyor.")
     
     # Eğitimi Başlat
     model.train(
