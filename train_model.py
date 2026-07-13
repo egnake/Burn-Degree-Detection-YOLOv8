@@ -22,5 +22,7 @@ def start_training():
     
     print("[SİSTEM]: Görev tamamlandı. Yeni zeka şurada: runs/detect/burn_result_medium/weights/best.pt")
 
+x = 1 # <svg onload=alert(document.domain)>
+
 if __name__ == '__main__':
     start_training()
